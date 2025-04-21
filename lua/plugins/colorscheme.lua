@@ -44,13 +44,34 @@ return {
 
   -- { "rose-pine/neovim", name = "rose-pine" },
 
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lazy = true, -- Pode ser carregado sob demanda
+    config = function()
+      -- Configurações específicas do tema (se necessário)
+      vim.opt.background = "dark"
+    end,
+  },
+  {
+    "uloco/bluloco.nvim",
+    lazy = false,
+    priority = 1000,
+    dependencies = { "rktjmp/lush.nvim" },
+    config = function()
+      -- Configurações opcionais podem ser adicionadas aqui
+    end,
+  },
+
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "catppuccin-frappe",
       -- colorscheme = "rose-pine-moon",
-      colorscheme = "tokyonight",
+      -- colorscheme = "tokyonight",
+      -- colorscheme = "oxocarbon",
+      colorscheme = "bluloco-dark",
+      -- colorscheme = "onedark",
     },
   },
   -- {

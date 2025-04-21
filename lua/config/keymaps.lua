@@ -22,6 +22,10 @@ map("n", "<leader>-", function()
   require("oil").toggle_float()
 end, { desc = "Open parent directory in floating window" })
 
+map("n", "<leader>ac", 'ggVG"+y', { desc = "Copiar tudo pro clipboard" })
+
+map("n", "<leader>bc", ":bd<CR>", { desc = "Close Current Buffer" })
+
 -- Neo-tree
 map("n", "<leader>E", "<cmd>Neotree toggle buffers<cr>", { desc = "Toggle Buffers Explorer" })
 
@@ -59,3 +63,15 @@ map("v", ">", ">gv")
 -- moving lines
 map("x", "J", ":m '>+1<cr>gv=gv")
 map("x", "K", ":m '<-2<cr>gv=gv")
+
+-- Ir para a próxima tab
+map("n", "<Tab>", ":tabnext<CR>", { desc = "Next Tab" })
+
+-- Ir para a tab anterior
+map("n", "<S-Tab>", ":tabprevious<CR>", { desc = "Previous Tab" })
+
+-- Fechar a tab atual
+map("n", "<leader>tc", ":tabclose<CR>", { desc = "Close Tab" })
+
+-- Abrir uma nova tab
+map("n", "<leader>tn", ":tabnew<CR>", { desc = "New Tab" })
